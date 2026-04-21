@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Notes App</title>
+    <script defer="defer" src="bundle.js"></script>
+  </head>
+  <body>
+    <app-bar brand="Notes" subtitle="App"></app-bar
+    ><loading-indicator></loading-indicator>
+    <div class="main-layout">
+      <section>
+        <h2 class="section-title">Tambah Catatan</h2>
+        <note-form max-title="100" max-body="500"></note-form>
+      </section>
+      <section>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="active">
+            Catatan Aktif
+          </button>
+          <button class="tab-btn" data-tab="archived">Diarsipkan</button>
+        </div>
+        <h2 class="section-title notes-section-title">Catatan Aktif</h2>
+        <notes-list></notes-list>
+      </section>
+    </div>
+    <div class="toast" id="toast"></div>
+  </body>
+</html>
